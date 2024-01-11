@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+/* Banner: imagen del logo de la marca */
+.banner {
+    width: 100%;
+    padding: 9rem 3rem;
+    text-align: center;
+    background: url("../Img/logo.png");
+    background-color: rgb(0, 0, 0, 0.3);
+    background-blend-mode: soft-light; /*combinar fondos*/
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+.banner h1 {
+    color:#fff;
+}
+/*.contenedor{
+    width: 100%;
+    height: 60px;
+    background: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    position: sticky
+    top: 0;
+}*/
+/* Nuevo contenedor para el banner y la barra de navegación */
+.header-container {
+    position: relative;
+}
+
+/* Barra de navegación */
+.header {
+    background-color: #444;
+    color: #fff;
+    width: 100%;
+    margin-inline: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima del banner */
+    top: 0;
+}
+
+.banner {
+    width: 100%;
+    padding: 9rem 3rem;
+    text-align: center;
+    background: url("../Img/fondologo.png" );
+    background-color: rgb(0, 0, 0, 0.1);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 80px; /* Ajusta según sea necesario para evitar que la barra de navegación cubra el banner */
+}
+
+
+img{
+    width: 100%;
+    object-fit: cover;
+
+}
+/* Contenedor */
+.contenedor{
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 40px;
+
+}
+/* Header - Menu */
+.header {
+
+    background-color: #444;
+    color: #fff;
+    width: 100%;
+    margin-inline: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    position: fixed;
+    margin-top: auto;
+}
+.main{
+    padding-top: 10px;
+}
+.logo{
+    font-weight: 900;
+    font-size: 20px;
+}
+.logo span{
+    color:#FFD700;
+
+}
+
+.logoup {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px; /* Agrega margen inferior para separar el logo del menú */
+}
+.pizzamenu{
+    width: 30px;
+}
+
+@media (min-width:768px) {
+    .pizzamenu{
+        display: none;
+    }
+}
+
+.pizzamenu:hover{
+    cursor: pointer;
+}
+
+/* navegacion */
+.menu{
+    display: none;
+}
+@media (min-width:768px){
+    .menu{
+        display: flex;
+    }
+}
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding-left: 0%;
+    list-style: none;
+
+}
+@media (min-width:768px) {
+    .navegacion{
+        gap: 30px;
+    }
+}
+@media (min-width:992px) {
+    .navegacion{
+        gap: 50px;
+    }
+}
+.navegacion a{
+    text-decoration: none;
+    color: rgb(97, 97, 97)
+    font-weight: 400;
+    font-size: 15px;
+}
+.navegacion a:hover {
+    color: black;
+}
+.navegacion li:last-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navegacion li:last-child{
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0; /* Elimina el margen predeterminado del h1 */
+}
+
+.navegacion li:last-child a:last-child{
+    background-color: #FFD700;
+    color:white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid orangered;
+    display: flex;
+    flex-grow: 1; /* Permite que el menú ocupe el espacio disponible */
+}
+.navegacion li:last-child a:last-child:hover{
+    background-color: white;
+    color: red;
+}
+
+/* información Banner */
+.presentacion{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+@media (min-width:768px){
+    .presentacion{
+        flex-direction: row;
+    }
+}
+/* Información */
+.informacion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (min-width:768px) {
+    .informacion{
+        text-align: start;
+        align-items: flex-start;
+    }
+}
+.informacion--boton button{
+    padding: 10px;
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.informacion--boton button:hover{
+    background-color: burlywood;
+    color: white;
+    cursor: pointer;
+}
+
+/* Informacion Imagen */
+.presentacion--imagen{
+    max-width: 300px;
+    filter: drop-shadow(0 1mm 3mm rgba(255,166,0,0.468)); /*efecto de sombreado en el contenedor*/
+}
+@media (min-width:456px) {
+    .presentacion--imagen{
+        max-width: 500px;
+    }
+}
+@media (min-width:1024px) {
+    .presentacion--imagen{
+        max-width: 800px;
+    }
+}
+/* Seccion Platos */
+.comida{
+    width: 90%;
+    margin-inline: auto;
+}
+.platos{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 85px;
+}
+@media (min-width:768px) {
+    .platos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:992px) {
+    .platos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.comida--titulo{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 85px;
+}
+@media (min-width:768ox){
+    .comida--titulo{
+        text-align: start;
+    }
+}
+/* Contenedor de tarjetas */
+.plato{
+    width: 80%;
+    margin-inline: auto;
+    background-color: beige;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 0.426);
+}
+.plato img{
+    width: 150px;
+    filter: drop-shadow(0 0 0.9rem orangered);
+    margin-top: -85px;
+}
+.plato p{
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+}
+.plato--info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+.plato--info p{
+    font-weight: 900;
+}
+.plato--info button{
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    padding:  5px 12px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.plato--info button:hover{
+    cursor: pointer;
+}
+
+
+.nav-items {
+    display: flex;
+    justify-content: center; /* Alinea los elementos del menú al centro */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3;
+}
+
+.btn {
+    text-align: right; /* Alinea el botón de servicios al lado derecho */
+}
+
+.btn button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+    background-color: #45a049;
+}
+
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}

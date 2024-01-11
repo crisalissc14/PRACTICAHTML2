@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">123-456-7890</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <img src="../Img/pizzaicon.jpg" alt="Logo de Cristi's Pizza" class="logo-img">
+            </div>
+            <div class="container-user">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <header class="header-container" id="header">
+            <div class="header">
+        <div class="logo">
+            <p>CRISTI'S<span>PIZZA</span></p>
+        </div>
+        <div class="pizzamenu">
+            <img src="../Img/barramenu.jpg" alt="menu pizza">
+        </div>
+        <nav class=" menu ">
+            <ul class="navegacion">
+            <li><a href="../index.html">Inicio</a> </li>
+            <li><a href="./Acercade.html">Acerca de</a></li>
+            <li><a href="./Productos.html">Productos</a></li>
+            <li><a href="./Sucursales.html">Sucursales</a></li>
+            <li><a href="./Contacto.html">Contacto</a></li>
+            <li><a href="./Productos.html">Servicios</a></li>
+            </ul>
+        </nav>
+            </div>
+            <br>
+        </header>
+        <br><br>
+
+        <asside class="presentacion" id="presentacion">
+            <div class="informacion">
+            <br>
+            <h3>Acerca de Nosotros</h3>
+            <h1>Por qué elegirnos?</h1>
+                    <h3>Más de 14 años de Experiencia</h3>
+                    <p>Desde 2009, nuestra pizzería ha estado sirviendo las mejores pizzas de la ciudad.</p><p>Nos enorgullece utilizar solo los ingredientes más frescos y de alta calidad para nuestras pizzas,
+                        y nuestro equipo de chefs altamente capacitados trabaja duro para garantizar que cada pizza sea perfecta.
+                        En nuestra pizzería, creemos que la comida es más que solo combustible: es una experiencia. Por eso, nos
+                        esforzamos por crear un ambiente acogedor y amigable para nuestros clientes, donde puedan disfrutar de una
+                        deliciosa pizza con amigos y familiares.
+                    ¡Gracias por elegirnos!</p>
+            </div>
+            <div class="presentacion--imagen">
+                <img src="../Img/acercade.jpg" alt="About us">
+            </div>
+        </asside>
+    </div>
+        <footer>
+            <p>&copy; 2023 Mi Página Web</p>
+        </footer>
+    
+        <!-- Archivo y pagina para js  -->
+        <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script>
+            // Script para el efecto de scroll en el header
+            window.onscroll = function () {
+                scrollFunction();
+            };
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-100px";
+                }
+            }
+        </script>
+    
+    </body>
+    </html>

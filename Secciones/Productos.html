@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../js/scripts.js">
+
+</head>
+
+<body>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">123-456-7890</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <img src="../Img/pizzaicon.jpg" alt="Logo de Cristi's Pizza" class="logo-img">
+            </div>
+            <div class="container-user">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <header class="header-container" id="header">
+            <div class="header">
+        <div class="logo">
+            <p>CRISTI'S<span>PIZZA</span></p>
+        </div>
+        <div class="pizzamenu">
+            <img src="../Img/barramenu.jpg" alt="menu pizza">
+        </div>
+        <nav class=" menu ">
+            <ul class="navegacion">
+            <li><a href="../index.html">Inicio</a> </li>
+            <li><a href="./Acercade.html">Acerca de</a></li>
+            <li><a href="./Productos.html">Productos</a></li>
+            <li><a href="./Sucursales.html">Sucursales</a></li>
+            <li><a href="./Contacto.html">Contacto</a></li>
+            <li><a href="./Productos.html">Servicios</a></li>
+            </ul>
+        </nav>
+            </div>
+            <br>
+        </header>
+        <br><br>
+        <section class="animate__animated animate__fadeIn">
+            <h2>¡BIENVENIDO A NUESTRA PÁGINA!</h2>
+            <div class="search-container">
+                <input type="text" id="inputSearch" placeholder="Buscar sucursal...">
+                <button onclick="buscador_interno()">Buscar</button>
+            </div>
+        </section>
+        <main class="comida" id="productos">
+            <h2 class="comida--titulo">Nuestros Productos</h2>
+            <!-- Cuadros de productos -->
+            <div class="platos">
+                <!-- Producto 1 -->
+                <article class="plato">
+                    <img src="../Img/campestre.png" alt="Producto 1">
+                    <h1>Campestre</h1>
+                    <p>Ingredientes: Champiñones frescos, espinacas, tomate, queso mozzarella y salsa de tomate.
+                        <p>Descripción: Una deliciosa combinación de ingredientes frescos y saludables que te transportará al campo con cada bocado.</p>
+                    <div class="plato--info">
+                        <p>$9.99</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+                <!-- Producto 2 -->
+                <article class="plato">
+                    <img src="../Img/hawaiian.png" alt="Producto 2">
+                    <h1>Hawaiana</h1>
+                    <p>ngredientes: Jamón, piña, queso mozzarella y salsa de tomate.
+                        <p>Descripción: El clásico sabor tropical que combina la dulzura de la piña con el salado del jamón, creando una experiencia deliciosa y única.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+                <!-- Producto 3 -->
+                <article class="plato">
+                    <img src="../Img/pepperoni.png" alt="Producto 2">
+                    <h1>Pepperoni</h1>
+                    <p>Ingredientes: Pepperoni (salami picante), queso mozzarella y salsa de tomate.
+                        <p>Descripción: Una opción clásica y picante con generosas rodajas de pepperoni que aportan un toque de especias a cada bocado.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+                <!-- Producto 4 -->
+                <article class="plato">
+                    <img src="../Img/salami.png" alt="Producto 2">
+                    <h1>Salami</h1>
+                    <p>Ingredientes: Salami, queso mozzarella, aceitunas negras, y salsa de tomate.
+                        <p>Descripción: Una variante deliciosa con salami, que ofrece un sabor robusto y se complementa con la riqueza de las aceitunas negras.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+                <!-- Producto 5 -->
+                <article class="plato">
+                    <img src="../Img/tropical.png" alt="Producto 2">
+                    <h1>Tropical</h1>
+                    <p>Ingredientes: Jamón, piña, jalapeños, queso mozzarella y salsa de tomate.
+                        <p>Descripción: Una mezcla de sabores que combina la frescura de la piña, el toque picante de los jalapeños y la jugosidad del jamón, creando una experiencia tropical en cada porción.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+                <!-- Agrega más productos según sea necesario -->
+            </div>
+        </main>
+    </div>
+    
+        <footer>
+            <p>&copy; 2023 Todos los derechos reservados</p>
+        </footer>
+    
+        <!-- Archivo y pagina para js  -->
+        <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script>
+            // Script para el efecto de scroll en el header
+            window.onscroll = function () {
+                scrollFunction();
+            };
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-100px";
+                }
+            }
+        </script>
+    
+    </body>
+    </html>

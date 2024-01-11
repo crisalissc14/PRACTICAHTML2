@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">123-456-7890</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <img src="../Img/pizzaicon.jpg" alt="Logo de Cristi's Pizza" class="logo-img">
+            </div>
+            <div class="container-user">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <header class="header-container" id="header">
+            <div class="header">
+        <div class="logo">
+            <p>CRISTI'S<span>PIZZA</span></p>
+        </div>
+        <div class="pizzamenu">
+            <img src="../Img/barramenu.jpg" alt="menu pizza">
+        </div>
+        <nav class=" menu ">
+            <ul class="navegacion">
+            <li><a href="../index.html">Inicio</a> </li>
+            <li><a href="./Acercade.html">Acerca de</a></li>
+            <li><a href="./Productos.html">Productos</a></li>
+            <li><a href="./Sucursales.html">Sucursales</a></li>
+            <li><a href="./Contacto.html">Contacto</a></li>
+            <li><a href="./Productos.html">Servicios</a></li>
+            </ul>
+        </nav>
+            </div>
+            
+            <br>
+        </header>
+        <br><br>
+
+        <section class="animate__animated animate__fadeIn">
+            <h2>¡Encuentra nuestras sucursales!</h2>
+        
+            <div class="search-container">
+                <input type="text" id="inputSearch" placeholder="Buscar sucursal...">
+                <button onclick="buscador_interno()">Buscar</button>
+            </div>
+        
+            <main class="sucursales" id="sucursales">
+                <div class="mapa-container">
+                    <!-- Primer mapa de Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.910039652124!2d-78.5401877784959!3d-0.1372235211193079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5854c908f1735%3A0x3310d6a460b264a4!2sEl%20Hornero%20(Parque%20Bicentenario)!5e0!3m2!1ses-419!2sec!4v1700985399568!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Dirección de la primera sucursal -->
+                    <p>Dirección Matriz: Av.Occidental y calle Cesar Villacres</p>
+                </div>
+        
+                <div class="mapa-container">
+                    <!-- Segundo mapa de Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.210477478166!2d-78.50455478261718!3d-0.16074019999999833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59abec586f7ff%3A0x726e88f4f1594144!2sPizza%20Hut%20Bosque!5e0!3m2!1ses-419!2sec!4v1700985472022!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Dirección de la segunda sucursal -->
+                    <p>Dirección de la Sucursal 2: Av. Machala y calle Flavio Alfaro.</p>
+                </div>
+            </main>
+        </section>
+        
+    <footer>
+            <p>&copy; 2023 Todos los derechos reservados.</p>
+    </footer>
+    
+<!-- Archivo y pagina para js  -->
+<script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/scripts.js"></script>
+<script>
+    // Script para el efecto de scroll en el header
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("header").style.top = "0";
+        } else {
+            document.getElementById("header").style.top = "-100px";
+        }
+    }
+
+    //Declarando variables
+        let inputSearch = document.getElementById("inputSearch");
+
+        //Creando filtro de búsqueda
+        function buscador_interno() {
+            let filter = inputSearch.value.toUpperCase();
+            let mapContainers = document.querySelectorAll('.mapa-container');
+
+            // Recorriendo los elementos a filtrar mediante los mapContainers
+            for (let i = 0; i < mapContainers.length; i++) {
+                let mapContainer = mapContainers[i];
+                let addressElement = mapContainer.querySelector('p');
+                let addressText = addressElement.textContent || addressElement.innerText;
+
+                // Comparando el texto de la dirección con el filtro
+                if (addressText.toUpperCase().indexOf(filter) > -1) {
+                    // Mostrando el contenedor si coincide con la búsqueda
+                    mapContainer.style.display = "";
+                } else {
+                    // Ocultando el contenedor si no coincide con la búsqueda
+                    mapContainer.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    </body>
+    </html>
