@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 // Ruta para la página de inicio
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Secciones', 'Productos.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Ruta para la página de productos
@@ -39,17 +39,17 @@ app.get('/carrito.html', (req, res) => {
 });
 
 // Ruta para la página de Acerca de
-app.get('/Acercade.html', (req, res) => {
+app.get('/Secciones/Acercade.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'Acercade.html'));
 });
 
 // Ruta para la página de Contacto
-app.get('/Contacto.html', (req, res) => {
+app.get('/Secciones/Contacto.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'Contacto.html'));
 });
 
 // Ruta para la página de Sucursales
-app.get('/Sucursales.html', (req, res) => {
+app.get('/Secciones/Sucursales.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'Sucursales.html'));
 });
 
