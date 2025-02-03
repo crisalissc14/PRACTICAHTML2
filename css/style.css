@@ -518,3 +518,73 @@ footer {
     color: #fff;
     padding: 10px;
 }
+
+/* Estilos para la tabla del carrito */
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.tabla-carrito th, .tabla-carrito td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.tabla-carrito th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.tabla-carrito tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-carrito tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla-carrito td input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.tabla-carrito td button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tabla-carrito td button:hover {
+    background-color: #ff1a1a;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.total p {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.total button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.total button:hover {
+    background-color: #45a049;
+}
