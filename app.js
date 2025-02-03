@@ -23,6 +23,11 @@ app.use(express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'Secciones')));
 app.use(bodyParser.json());
 
+// Ruta para la página de inicio
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Secciones', 'Productos.html'));
+});
+
 // Ruta para la página de productos
 app.get('/productos', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'Productos.html'));
