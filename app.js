@@ -16,7 +16,10 @@ testConnection();
 verifyTable();
 
 // Configurar middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'css')));
+app.use(express.static(path.join(__dirname, 'Img')));
+app.use(express.static(path.join(__dirname, 'js')));
+app.use(express.static(path.join(__dirname, 'Secciones')));
 app.use(bodyParser.json());
 
 // Ruta para la página de inicio
