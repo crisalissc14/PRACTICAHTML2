@@ -38,6 +38,21 @@ app.get('/carrito.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'carrito.html'));
 });
 
+// Ruta para la página de Acerca de
+app.get('/Acercade.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Secciones', 'Acercade.html'));
+});
+
+// Ruta para la página de Contacto
+app.get('/Contacto.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Secciones', 'Contacto.html'));
+});
+
+// Ruta para la página de Sucursales
+app.get('/Sucursales.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Secciones', 'Sucursales.html'));
+});
+
 // Ruta para obtener productos desde la base de datos
 app.get('/api/productos', async (req, res) => {
     try {
