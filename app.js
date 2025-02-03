@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'Img')));
 app.use(express.static(path.join(__dirname, 'js')));
-app.use(express.static(path.join(__dirname, 'Secciones')));
 app.use(bodyParser.json());
 
 // Ruta para la página de inicio
@@ -34,7 +33,7 @@ app.get('/productos', (req, res) => {
 });
 
 // Ruta para la página del carrito
-app.get('/carrito.html', (req, res) => {
+app.get('/Secciones/carrito.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'carrito.html'));
 });
 
