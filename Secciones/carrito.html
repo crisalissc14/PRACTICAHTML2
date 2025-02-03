@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">123-456-7890</span>
+                </div>
+            </div>
+            <div class="container-logo">
+                <img src="/pizzaicon.jpg" alt="Logo de Cristi's Pizza" class="logo-img">
+            </div>
+            <div class="container-user">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-basket-shopping" onclick="window.location.href='/carrito.html'"></i>
+                <div class="content-shopping-cart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <header class="header-container" id="header">
+            <div class="header">
+                <div class="logo">
+                    <p>CRISTI'S<span>PIZZA</span></p>
+                </div>
+                <div class="pizzamenu">
+                    <img src="/barramenu.jpg" alt="menu pizza">
+                </div>
+                <nav class="menu">
+                    <ul class="navegacion">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/Acercade.html">Acerca de</a></li>
+                        <li><a href="/productos">Productos</a></li>
+                        <li><a href="/Sucursales.html">Sucursales</a></li>
+                        <li><a href="/Contacto.html">Contacto</a></li>
+                        <li><a href="/Servicios.html">Servicios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+        </header>
+        <br><br>
+        <main class="carrito" id="carrito">
+            <h2 class="carrito--titulo">Carrito de Compras</h2>
+            <table id="tabla-carrito" class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los productos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <div class="total">
+                <p>Total: $<span id="total">0.00</span></p>
+                <button onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Todos los derechos reservados</p>
+    </footer>
+    
+    <!-- Archivo y pagina para js  -->
+    <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/carrito.js"></script>
+</body>
+</html>

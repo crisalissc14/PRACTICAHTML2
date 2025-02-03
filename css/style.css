@@ -11,12 +11,11 @@ body {
 
 /* Banner: imagen del logo de la marca */
 /* Contenedor de Hero */
-.container-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2; /* Asegura que el contenedor-hero esté por encima del banner y del menú */
+.footer .container-hero {
+    position: relative;
+    margin-top: 5rem;
+    /* Asegura que el contenedor-hero esté por encima del footer */
+    z-index: 2;
 }
 
 .container-hero .hero {
@@ -77,7 +76,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute; /* Cambiado a absolute para que el menú no afecte el flujo del documento */
+    position: fixed; /* Cambiado a fixed para que el menú esté en la parte superior de la pantalla */
     top: 0;
     z-index: 1; /* Asegura que la barra de navegación esté por debajo del contenedor-hero inicialmente */
 }
