@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const { connectDB, testConnection, verifyTable, sql } = require('./dbconfig');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // Conectar a la base de datos
 connectDB();
@@ -16,11 +16,7 @@ testConnection();
 verifyTable();
 
 // Configurar middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'css')));
-app.use(express.static(path.join(__dirname, 'Img')));
-app.use(express.static(path.join(__dirname, 'js')));
-app.use(express.static(path.join(__dirname, 'Secciones')));
+app.use(express.static(path.join(__dirname)));
 app.use(bodyParser.json());
 
 // Ruta para la página de inicio
@@ -29,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 // Ruta para la página de productos
-app.get('/productos', (req, res) => {
+app.get('/Secciones/Productos.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Secciones', 'Productos.html'));
 });
 
@@ -77,7 +73,7 @@ app.post('/api/productos', async (req, res) => {
 });
 
 // Iniciar el servidor
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });
 
